@@ -12,9 +12,11 @@ $(document).ready(function() {
           method: "GET",
           success: function(data, stato) {
             if (data.response <= 5) {
+              $('.square').removeClass('red');
               $('.square').addClass('yellow');
               $('.square').text(data.response);
             } else {
+              $('.square').removeClass('yellow');
               $('.square').addClass('red');
               $('.square').text(data.response);
             }
