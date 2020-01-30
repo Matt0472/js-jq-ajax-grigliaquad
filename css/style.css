@@ -23,6 +23,7 @@
   width: 79px;
   height: 79px;
   border: 2px solid red;
-  background: green;
+  /* background: green; */
   display: inline-block;
+  cursor: pointer;
 }
