@@ -4,4 +4,20 @@
 // Il numero ottenuto appare al centro del quadrato.
 // I quadrati fateli prima a mano e poi con javascript.
 
-$(document).ready();
+$(document).ready(function() {
+  $('.square').click(
+    $.ajax(
+      {
+        url: 'https://flynn.boolean.careers/exercises/api/random/int',
+        method: "GET",
+        success: function(data, stato) {
+          console.log(data);
+          // $('#risultati').html(data);
+        },
+        error: function(richiesta, stato, errori) {
+          alert('E\' avvenuto un errore.' + errori);
+        }
+      }
+    )
+  );
+});
