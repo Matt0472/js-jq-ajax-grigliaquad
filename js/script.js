@@ -6,19 +6,21 @@
 
 $(document).ready(function() {
   $('.square').click(function() {
+    var forma = $(this);
       $.ajax(
         {
           url: 'https://flynn.boolean.careers/exercises/api/random/int',
           method: "GET",
           success: function(data, stato) {
+            console.log(this);
             if (data.response <= 5) {
-              $('.square').removeClass('red');
-              $('.square').addClass('yellow');
-              $('.square').text(data.response);
+              $(forma).removeClass('red');
+              $(forma).addClass('yellow');
+              $(forma).text(data.response);
             } else {
-              $('.square').removeClass('yellow');
-              $('.square').addClass('red');
-              $('.square').text(data.response);
+              $(forma).removeClass('yellow');
+              $(forma).addClass('red');
+              $(forma).text(data.response);
             }
 
           },
