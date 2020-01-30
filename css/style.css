@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.red {
+  background: red;
+}
+
+.yellow {
+  background: yellow;
+}
+
+.ajax_grid {
+  width: 500px;
+  height: 500px;
+  border: 2px solid black;
+  margin: 0 auto;
+}
+
+.square {
+  width: 79px;
+  height: 79px;
+  border: 2px solid red;
+  background: green;
+  display: inline-block;
+}
